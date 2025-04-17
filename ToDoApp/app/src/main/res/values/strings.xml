@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ToDo App</string>
+    <string name="to_do_app">TO DO APP</string>
+    <string name="task_title">Task Title</string>
+    <string name="task_description">Task Description</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="description">Description</string>
+    <string name="title">Title</string>
+    <string name="get_started">GET STARTED!</string>
+</resources>
