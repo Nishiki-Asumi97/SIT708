@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvDetail"
+        android:layout_width="match_parent"
+        android:layout_height="361dp"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnRemove"
+        android:layout_width="373dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="REMOVE" />
+</LinearLayout>
