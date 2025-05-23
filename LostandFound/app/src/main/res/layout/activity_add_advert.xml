@@ -67,6 +67,13 @@
             android:layout_height="match_parent"/>
 
         <Button
+            android:id="@+id/btnGetLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/get_current_location"
+            android:layout_marginTop="8dp" />
+
+        <Button
             android:id="@+id/btnSave"
             android:text="SAVE"
             android:layout_width="match_parent"

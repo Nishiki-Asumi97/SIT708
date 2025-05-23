@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Lost and Found</string>
+    <string name="get_current_location">GET CURRENT LOCATION</string>
 </resources>

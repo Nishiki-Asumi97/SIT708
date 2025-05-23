@@ -79,4 +79,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_NAME, COL_ID + " = ?", new String[]{String.valueOf(id)});
     }
+
+    public Cursor getAllItemsCursor() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+    }
+
 }
