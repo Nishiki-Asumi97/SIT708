@@ -42,7 +42,7 @@ public class AddAdvertActivity extends AppCompatActivity {
 
         // Initialize Places API
         if (!Places.isInitialized()) {
-            Places.initialize(getApplicationContext(), "AIzaSyCi7e7sfDNMSjczkeAUur9h2hAblyUBKjA");
+            Places.initialize(getApplicationContext(), "AIzaSyAXVpIAgUsOpU4VBxqjp20CMy-SoyYqkPE");
         }
 
         RadioGroup radioGroup = findViewById(R.id.radioGroup);

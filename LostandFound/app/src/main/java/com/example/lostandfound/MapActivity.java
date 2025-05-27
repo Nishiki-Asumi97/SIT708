@@ -5,6 +5,8 @@ import android.database.Cursor;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.gms.maps.*;
@@ -25,11 +27,12 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
         db = new DatabaseHelper(this);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
+        assert mapFragment != null;
         mapFragment.getMapAsync(this);
     }
 
     @Override
-    public void onMapReady(GoogleMap googleMap) {
+    public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
         Cursor cursor = db.getAllItemsCursor(); // Add this method in DB
         if (cursor.moveToFirst()) {
@@ -38,6 +41,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
                 Geocoder geocoder = new Geocoder(this);
                 try {
                     List<Address> addrList = geocoder.getFromLocationName(locStr, 1);
+                    assert addrList != null;
                     if (!addrList.isEmpty()) {
                         LatLng pos = new LatLng(addrList.get(0).getLatitude(), addrList.get(0).getLongitude());
                         mMap.addMarker(new MarkerOptions().position(pos).title(cursor.getString(1) + ": " + cursor.getString(4)));
